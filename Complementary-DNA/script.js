@@ -1,5 +1,4 @@
 function DNAStrand(dna){
-    //your code here
     var result= "";
         for(var i =0; i<dna.length; i++) 
         {

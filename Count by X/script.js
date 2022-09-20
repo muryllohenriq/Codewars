@@ -4,5 +4,5 @@ function countBy(x, n) {
         z.push(x * i);
     }
     return z;
-} console.log(countBy(2,1));
+} console.log(countBy(2,4));
 
