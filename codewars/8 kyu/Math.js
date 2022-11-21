@@ -31,3 +31,10 @@ function findDifference(a, b) {
 function litres(time) {
   return Math.trunc(time * 0.5)
 } console.log(litres(1));
+
+// - Find Maximum and Minimum Values of a List
+// Your task is to make two functions ( max and min, or maximum and minimum, etc., depending on the language ) that receive a list of integers as input, and return the largest and lowest number in that list, respectively.
+
+const min = (list) => Math.min(...list);
+const max = (list) => Math.max(...list);
+console.log(max([2,3]));
