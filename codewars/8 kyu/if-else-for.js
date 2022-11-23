@@ -90,6 +90,7 @@ function FirstFactorial(num) {
 // c2 = a2 + b2
 // where c is the largest value of a, b, c.
 // For example: a = 3, b = 4, c = 5 forms a pythagorean triple, because 52 = 32 + 42
+// Jeitos que eu fiz
 
 function isPythagoreanTriple(a, b ,c) {
   for (var i = 0; i < a; i++) {
@@ -102,6 +103,12 @@ function isPythagoreanTriple(a, b ,c) {
       var resultC = c * c;
   }
   if (resultA + resultB == resultC)
+  return true
+  else return false
+} console.log(isPythagoreanTriple(3,4,5));
+
+function isPythagoreanTriple(integers) {
+  if (integers[0] * integers[0] + integers[1] * integers[1] == integers[2] * integers[2])
   return true
   else return false
 } console.log(isPythagoreanTriple(3,4,5));
