@@ -64,3 +64,32 @@ function isPythagoreanTriple(integers) {
   let massiv = integers.sort((a, b) => a - b);
   return massiv[0] ** 2 + massiv[1] ** 2 == massiv[2] ** 2;
 } console.log(isPythagoreanTriple([2,3,5]));
+
+// - Invert values
+// Given a set of numbers, return the additive inverse of each. Each positive becomes negatives, and the negatives become positives.
+// invert([1,2,3,4,5]) == [-1,-2,-3,-4,-5]
+// invert([1,-2,3,-4,5]) == [-1,2,-3,4,-5]
+// - arrow function e function .map 
+const invert = array => array.map(num => -num);
+// -----------------------------------------------
+function invert(array) {
+  return array.map(e=> e*-1);
+}
+// - .push
+function invert(array) {
+  var newArr = [];
+  for(var i = 0; i < array.length; i++){
+    newArr.push(-array[i]);
+  }
+   return newArr;
+}
+
+// - Find Multiples of a Number
+// In this simple exercise, you will build a program that takes a value, integer , and returns a list of its multiples up to another value, limit . If limit is a multiple of integer, it should be included as well. There will only ever be positive integers passed into the function, not consisting of 0. The limit will always be higher than the base.
+// For example, if the parameters passed are (2, 6), the function should return [2, 4, 6] as 2, 4, and 6 are the multiples of 2 up to 6.
+
+function findMultiples(integer, limit) {
+  let result = [];
+  for (let i = integer; i <= limit; i += integer) result.push(i);
+  return result;
+} console.log(findMultiples(5,25));
