@@ -160,3 +160,51 @@ const grow = x => {
 };
 
 console.log(grow([5,2,3]));
+
+// Goals: 1. Finds all the prime numbers between 1 and 1000. 2. Sums all the prime numbers that you found between 1 and 1000. 3. The `main` function should return the sum of all prime numbers. Develop the solution entirely on this editor.
+
+	// Javascript Program to compute sum
+	// of prime number in a given range
+	
+	// Method to compute the prime
+	// number Time Complexity is O(sqrt(N))
+	function checkPrime(numberToCheck)
+	{
+		if(numberToCheck == 1)
+		{
+			return false;
+		}
+		for (let i = 2; i * i <= numberToCheck; i++)
+		{
+			if (numberToCheck % i == 0)
+			{
+				return false;
+			}
+		}
+		return true;
+	}
+
+	// Method to iterate the loop from l to r
+	// If prime number detects, sum the value
+	function primeSum(l, r)
+	{
+		let sum = 0;
+		for (let i = r; i >= l; i--)
+		{
+
+			// Check for prime
+			let isPrime = checkPrime(i);
+			if (isPrime)
+			{
+
+				// Sum the prime number
+				sum = sum + i;
+			}
+		}
+		return sum;
+	}
+	
+	let l = 1, r = 7;
+
+	// Call the method with l and r
+	console.log(primeSum(l, r));
