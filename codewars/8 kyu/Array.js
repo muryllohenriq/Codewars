@@ -51,7 +51,12 @@ console.log(gooseFilter(["African", "Muryllo"]));
 
 function none(arr, fun) {
   return !arr.some(fun);
-} console.log(none([10], function(item){ return item > 9 }));
+}
+console.log(
+  none([10], function (item) {
+    return item > 9;
+  })
+);
 
 // - Pythagorean Triple
 // Given an array of 3 non-negative integers a, b and c, determine if they form a pythagorean triple.
@@ -63,25 +68,26 @@ function none(arr, fun) {
 function isPythagoreanTriple(integers) {
   let massiv = integers.sort((a, b) => a - b);
   return massiv[0] ** 2 + massiv[1] ** 2 == massiv[2] ** 2;
-} console.log(isPythagoreanTriple([2,3,5]));
+}
+console.log(isPythagoreanTriple([2, 3, 5]));
 
 // - Invert values
 // Given a set of numbers, return the additive inverse of each. Each positive becomes negatives, and the negatives become positives.
 // invert([1,2,3,4,5]) == [-1,-2,-3,-4,-5]
 // invert([1,-2,3,-4,5]) == [-1,2,-3,4,-5]
-// - arrow function e function .map 
-const invert = array => array.map(num => -num);
+// - arrow function e function .map
+const invert = (array) => array.map((num) => -num);
 // -----------------------------------------------
 function invert(array) {
-  return array.map(e=> e*-1);
+  return array.map((e) => e * -1);
 }
 // - .push
 function invert(array) {
   var newArr = [];
-  for(var i = 0; i < array.length; i++){
+  for (var i = 0; i < array.length; i++) {
     newArr.push(-array[i]);
   }
-   return newArr;
+  return newArr;
 }
 
 // - Find Multiples of a Number
@@ -92,12 +98,22 @@ function findMultiples(integer, limit) {
   let result = [];
   for (let i = integer; i <= limit; i += integer) result.push(i);
   return result;
-} console.log(findMultiples(5,25));
+}
+console.log(findMultiples(5, 25));
 
 // - Beginner - Reduce but Grow
 // Given a non-empty array of integers, return the result of multiplying the values together in order. Example:
 // [1, 2, 3, 4] => 1 * 2 * 3 * 4 = 24
 
-const grow = x => x.reduce((a,b) => a * b);
+const grow = (x) => x.reduce((a, b) => a * b);
 
-console.log(grow([5,2,3]));
+console.log(grow([5, 2, 3]));
+
+// - Remove First and Last Character
+// It's pretty straightforward. Your goal is to create a function that removes the first and last characters of a string. You're given one parameter, the original string. You don't have to worry with strings with less than two characters.
+
+function removeChar(str) {
+  return str.slice(1, -1);
+}
+
+console.log(removeChar("world"));
