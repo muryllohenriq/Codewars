@@ -49,3 +49,17 @@ function getAge(inputString) {
   return parseInt(inputString);
 }
 console.log(getAge("1 years old"));
+
+// - Get the mean of an array
+// It's the academic year's end, fateful moment of your school report. The averages must be calculated. All the students come to you and entreat you to calculate their average for them. Easy ! You just need to write a script.
+// Return the average of the given array rounded down to its nearest integer.
+// The array will never be empty.
+
+function getAverage(marks) {
+  var number = 0;
+  for (var i = 0; i < marks.length; i++) { // faz um loop pelo array
+    number += marks[i]; // soma os valores do array e salva em "number"
+  }
+  return Math.floor(number / marks.length); // Math.floor() arredonda o número pra baixo
+}
+console.log(getAverage([1, 5, 87, 45, 8, 8]));
