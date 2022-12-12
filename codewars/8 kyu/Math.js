@@ -63,3 +63,15 @@ function getAverage(marks) {
   return Math.floor(number / marks.length); // Math.floor() arredonda o número pra baixo
 }
 console.log(getAverage([1, 5, 87, 45, 8, 8]));
+
+// - Count the number of cubes with paint on
+// Upon arriving at an interview, you are presented with a solid blue cube. The cube is then dipped in red paint, coating the entire surface of the cube. The interviewer then proceeds to cut through the cube in all three dimensions a certain number of times.
+// Your function takes as parameter the number of times the cube has been cut. You must return the number of smaller cubes created by the cuts that have at least one red face.
+// Examples:
+// countSquares(1) --> 8
+// countSquares(2) --> 26
+// countSquares(4) --> 98
+
+const countSquares = cuts => cuts === 0 ? 1 : (6 * cuts * cuts) + 2;
+
+console.log(countSquares(1));

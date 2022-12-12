@@ -9,16 +9,20 @@
 // "String.prototype.toAlternatingCase".toAlternatingCase() === "sTRING.PROTOTYPE.TOaLTERNATINGcASE"
 
 String.prototype.toAlternatingCase = function () {
-    return this.split("").map(a => a === a.toUpperCase()? a.toLowerCase(): a.toUpperCase()).join('')
-}; console.log("aaaaaaaaaAAA".toAlternatingCase());
+  return this.split("")
+    .map((a) => (a === a.toUpperCase() ? a.toLowerCase() : a.toUpperCase()))
+    .join("");
+};
+console.log("aaaaaaaaaAAA".toAlternatingCase());
 
 // - Is it a palindrome?
 // Write a function that checks if a given string (case insensitive) is a palindrome.
 
 function isPalindrome(x) {
-    var word = x.split('').reverse().join('')
-    return word.toLowerCase() == x.toLowerCase() ? true : false
-} console.log(isPalindrome("Bob"));
+  var word = x.split("").reverse().join("");
+  return word.toLowerCase() == x.toLowerCase() ? true : false;
+}
+console.log(isPalindrome("Bob"));
 
 // - Convert a String to a Number!
 // Description
@@ -30,17 +34,18 @@ function isPalindrome(x) {
 // "1405" --> 1405
 // "-7" --> -7
 
-const stringToNumber = function(str) {
-    return +str
-}
-console.log(stringToNumber('1234'));
+const stringToNumber = function (str) {
+  return +str;
+};
+console.log(stringToNumber("1234"));
 
 // - Remove exclamation marks
 // Write function RemoveExclamationMarks which removes all exclamation marks from a given string.
 
 function removeExclamationMarks(s) {
-    return s.split('!').join('');
-} console.log(removeExclamationMarks("hello!"));
+  return s.split("!").join("");
+}
+console.log(removeExclamationMarks("hello!"));
 
 // - Safen User Input Part I - htmlspecialchars
 // Safen User Input Part I - htmlspecialchars
@@ -53,8 +58,26 @@ function removeExclamationMarks(s) {
 // & --> &amp;
 
 function htmlspecialchars(formData) {
-    return formData.replace(/&/g, "&amp;")
-                 .replace(/"/g, "&quot;")
-                 .replace(/</g, "&lt;")
-                 .replace(/>/g, "&gt;");
-} console.log(htmlspecialchars("<h2>Hello World</h2>"));
+  return formData
+    .replace(/&/g, "&amp;")
+    .replace(/"/g, "&quot;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;");
+}
+console.log(htmlspecialchars("<h2>Hello World</h2>"));
+
+// - Are You Playing Banjo?
+// Create a function which answers the question "Are you playing banjo?".
+// If your name starts with the letter "R" or lower case "r", you are playing banjo!
+// The function takes a name as its only argument, and returns one of the following strings:
+// name + " plays banjo"
+// name + " does not play banjo"
+// Names given are always valid strings.
+
+function areYouPlayingBanjo(name) {
+  if (name.startsWith("r") || name.startsWith("R")) {
+    return `${name} plays banjo`;
+  } else return `${name} does not play banjo`;
+}
+
+console.log(areYouPlayingBanjo("obert"));
