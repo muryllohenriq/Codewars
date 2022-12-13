@@ -57,7 +57,8 @@ console.log(getAge("1 years old"));
 
 function getAverage(marks) {
   var number = 0;
-  for (var i = 0; i < marks.length; i++) { // faz um loop pelo array
+  for (var i = 0; i < marks.length; i++) {
+    // faz um loop pelo array
     number += marks[i]; // soma os valores do array e salva em "number"
   }
   return Math.floor(number / marks.length); // Math.floor() arredonda o número pra baixo
@@ -72,6 +73,23 @@ console.log(getAverage([1, 5, 87, 45, 8, 8]));
 // countSquares(2) --> 26
 // countSquares(4) --> 98
 
-const countSquares = cuts => cuts === 0 ? 1 : (6 * cuts * cuts) + 2;
+const countSquares = (cuts) => (cuts === 0 ? 1 : 6 * cuts * cuts + 2);
 
 console.log(countSquares(1));
+
+// - Quarter of the year
+// Given a month as an integer from 1 to 12, return to which quarter of the year it belongs as an integer number.
+// For example: month 2 (February), is part of the first quarter; month 6 (June), is part of the second quarter; and month 11 (November), is part of the fourth quarter.
+
+const quarterOf = (month) => {
+  return Math.ceil(month / 3);
+};
+console.log(quarterOf(7));
+
+// - Alan Partridge II - Apple Turnover
+// Your job is simple, if x squared is more than 1000, return It's hotter than the sun!!, else, return Help yourself to a honeycomb Yorkie for the glovebox.
+
+function apple(x) {
+  return Math.pow(x, 2 > 1000) ? 'It\'s hotter than the sun!!' : "Help yourself to a honeycomb Yorkie for the glovebox."
+}
+console.log(apple(100));

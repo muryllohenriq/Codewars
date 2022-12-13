@@ -215,15 +215,15 @@ console.log(primeSum(l, r));
 // 6, "I"     -> "IIIIII"
 // 5, "Hello" -> "HelloHelloHelloHelloHello"
 
-function repeatStr (n, s) {
+function repeatStr(n, s) {
   var result = "";
   for (var i = 0; i < n; i++) {
-      result += s
+    result += s;
   }
-  return result
+  return result;
 }
 
-console.log(repeatStr(6, '6'));
+console.log(repeatStr(6, "6"));
 
 // - Remove First and Last Character
 // It's pretty straightforward. Your goal is to create a function that removes the first and last characters of a string. You're given one parameter, the original string. You don't have to worry with strings with less than two characters.
@@ -234,3 +234,18 @@ function removeChar(str) {
   return word;
 }
 console.log(removeChar("world"));
+
+// - Grasshopper - Summation
+// Write a program that finds the summation of every number from 1 to num. The number will always be a positive integer greater than 0.
+// For example (Input -> Output):
+// 2 -> 3 (1 + 2)
+// 8 -> 36 (1 + 2 + 3 + 4 + 5 + 6 + 7 + 8)
+
+var summation = function (num) {
+  var result = 0;
+  for (var i = 1; i <= num; i++) {
+    result += i;
+  }
+  return result;
+};
+console.log(summation(2));
