@@ -124,9 +124,9 @@ console.log(removeChar("world"));
 // The array will never be empty.
 
 function getAverage(marks) {
-  return Math.floor(marks.reduce((sum, x) => sum + x) / marks.length)
+  return Math.floor(marks.reduce((sum, x) => sum + x) / marks.length);
 }
-console.log(getAverage([1,2,3]));
+console.log(getAverage([1, 2, 3]));
 
 // - Pre-FizzBuzz Workout #1
 // This is the first step to understanding FizzBuzz.
@@ -152,3 +152,18 @@ const isVow = (a) =>
   a.map((x) => ("aeiou".includes((y = String.fromCharCode(x))) ? y : x));
 
 console.log(isVow([1, 2, 3, 97]));
+
+// - Gravity Flip
+// Examples (input -> output:
+//   * 'R', [3, 2, 1, 2]      ->  [1, 2, 2, 3]
+//   * 'L', [1, 4, 5, 3, 5 ]  ->  [5, 5, 4, 3, 1]
+
+const flip = (d, a) => {
+  if (d == "R") {
+    return a.sort((a, b) => a - b);
+  }
+  if (d == "L") {
+    return a.sort((a, b) => b - a);
+  }
+};
+console.log(flip("L", [3, 2, 1]));

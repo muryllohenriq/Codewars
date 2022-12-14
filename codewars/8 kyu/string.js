@@ -94,3 +94,18 @@ function abbrevName(name){
   return (words[0][0] +'.'+ words[1][0]).toUpperCase()
 }
 console.log(abbrevName('sam Harris'));
+
+// - Is the string uppercase?
+// Create a method to see whether the string is ALL CAPS.
+// Examples (input -> output)
+// "c" -> False
+// "C" -> True
+// "hello I AM DONALD" -> False
+// "HELLO I AM DONALD" -> True
+// "ACSKLDFJSgSKLDFJSKLDFJ" -> False
+// "ACSKLDFJSGSKLDFJSKLDFJ" -> True
+
+String.prototype.isUpperCase = function () {
+  return this == this.toUpperCase();
+};
+console.log("AAAAAAA".isUpperCase());
